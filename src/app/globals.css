@@ -17,5 +17,14 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:"proxima-nova-condensed", "Helvetica", arial, sans-serif
+}
+
+.rafnas {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: italic; /* Italic font style */
+  font-weight: 400;   /* Normal weight, can adjust to 700 for bold */
+  font-size: 24px;    /* Adjust size */
+  color: #f3f0f0;   
+       /* Example color */
 }
