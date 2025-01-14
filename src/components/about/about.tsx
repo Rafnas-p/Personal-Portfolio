@@ -5,7 +5,6 @@ import {
   SiReact,
   SiTailwindcss,
   SiMongodb,
-  SiGit,
   SiNodedotjs,
   SiExpress,
   SiNextdotjs,
@@ -45,11 +44,12 @@ function About() {
                 a meaningful impact through code.
               </p>
             </div>
-          </div>
-          <p className="mt-6 italic text-gray-400">
-            "Dream big, code bigger, and never stop learning."
-          </p>
-        </div>
+            </div>
+<p className="mt-6 italic text-gray-400">
+  {"Dream big, code bigger, and never stop learning."}
+</p>
+</div>
+
       </div>
 
       <div className="py-16 bg-gray-900">

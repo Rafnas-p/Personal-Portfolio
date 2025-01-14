@@ -13,13 +13,13 @@ function Navbar() {
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMenuOpen(false); // Close menu after clicking a section
+    setIsMenuOpen(false); 
   };
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "work"];
-      for (let sectionId of sections) {
+      for (const sectionId of sections) {
         const section = document.getElementById(sectionId);
         if (section) {
           const { top, bottom } = section.getBoundingClientRect();
