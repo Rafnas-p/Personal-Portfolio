@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        "fade-in": "fadeIn 2s ease-in-out",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

@@ -1,54 +1,66 @@
+"use client"; // This marks the component as a Client Component
+
 import Image from "next/image";
 import React from "react";
 
 function Home() {
-  const profileImage = "https://dunks1980.com/images/hero_setup.avif";
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div
       id="home"
-      className="h-screen w-full bg-black mt-10 flex flex-col-reverse lg:flex-row"
+      className="h-screen w-full bg-gradient-to-r from-indigo-900 via-black to-gray-900 flex flex-col items-center justify-center relative overflow-hidden text-white"
     >
-      <div className="flex flex-col items-center lg:items-start justify-center w-full lg:w-3/4 bg-gradient-to-r from-black via-blue-900 to-black relative p-6 sm:p-8 md:p-10">
-        <div className="mb-6 transform transition-all duration-300 hover:scale-125">
-        <Image
-  src="/home/profile.jpg"
-  alt="Profile"
-    className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-white shadow-lg"
-  width={192}
-  height={192}
-  priority 
-  sizes="(max-width: 640px) 96px, (max-width: 1024px) 128px, 192px" 
-/>
-        </div>
-
-        <div className="text-center lg:text-left">
-  <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold opacity-90 transform transition-all duration-500 hover:opacity-100 hover:scale-110 mb-4">
-    Hi, I&apos;m Rafnas
-  </h1>
-  <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed opacity-80 hover:opacity-100 transition-all duration-500">
-    I am a dedicated MERN stack developer based in Kerala, India, with a
-    strong passion for creating user-friendly and visually engaging
-    applications. From e-commerce booking systems to a variety of web
-    solutions, I focus on building intuitive interfaces that provide
-    seamless and impactful user experiences. Take a look at my projects
-    to see how I bring ideas to life. Let&apos;s collaborate and create
-    something amazing together!
-  </p>
-</div>
-
+      {/* Background Elements */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div className="absolute w-[500px] h-[500px] bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-[200px] opacity-40"></div>
+        <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-gradient-to-br from-blue-500 to-teal-400 rounded-full blur-[150px] opacity-50"></div>
+        <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-gradient-to-tr from-yellow-400 to-orange-500 rounded-full blur-[150px] opacity-40"></div>
       </div>
 
-      <div
-        className="w-full lg:w-2/4 z-10 relative h-screen bg-cover bg-center"
-        style={{
-          backgroundImage: `url('${profileImage}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="absolute inset-0 bg-cover bg-center transform transition-all duration-500 hover:scale-110"></div>
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center">
+        {/* Profile Image */}
+        <div className="mb-8 transform transition-transform duration-300 hover:scale-110">
+          <Image
+            src="/home/profile.jpg"
+            alt="Profile"
+            className="w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full object-cover shadow-2xl border-[5px] border-gray-800"
+            width={208}
+            height={208}
+            priority
+          />
+        </div>
+
+        <h1 className="text-3xl md:text-5xl font-extrabold tracking-wide mb-4 text-center">
+          Hello, I&apos;m <span className="text-purple-400">Rafnas</span>
+        </h1>
+        <p className="text-gray-300 text-base md:text-lg max-w-xl text-center leading-relaxed">
+          A passionate MERN stack developer from Kerala, India. I create
+          high-quality web applications tailored to meet client needs while
+          ensuring seamless user experiences.
+        </p>
+
+        <div className="flex justify-center mt-8 gap-6">
+          <button
+            onClick={() => scrollToSection("work")}
+            className="px-5 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            View My Work
+          </button>
+          <button
+  onClick={() => window.location.href = "https://wa.me/9633298524"}
+  className="px-5 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+>
+  Contact Me
+</button>
+
+        </div>
       </div>
     </div>
   );

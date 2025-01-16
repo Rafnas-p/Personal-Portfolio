@@ -1,126 +1,87 @@
 import React from "react";
-import { FaCode, FaMusic, FaBook } from "react-icons/fa";
-import {
-  SiJavascript,
-  SiReact,
-  SiTailwindcss,
-  SiMongodb,
-  SiNodedotjs,
-  SiExpress,
-  SiNextdotjs,
-  SiTypescript,
-} from "react-icons/si";
 
 function About() {
   return (
     <div
       id="about"
-      className="min-h-screen bg-gradient-to-r from-blue-500 to-teal-500 text-white"
+      className="min-h-screen bg-gradient-to-br from-blue-800 via-teal-700 to-gray-900 text-white relative overflow-hidden"
     >
-      <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center">
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 uppercase tracking-wide">
-            Who Am I?
-          </h1>
-          <p className="text-lg md:text-xl mb-8">
-            I am a full-stack developer with a passion for building seamless web
-            applications. My journey started with curiosity and grew into a
-            relentless pursuit of learning, creating, and mastering the art of
-            code.
+      <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500 opacity-20 rounded-full filter blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-teal-500 opacity-20 rounded-full filter blur-3xl animate-pulse"></div>
+
+      <div className="container mx-auto px-8 py-20">
+        <h1 className="text-5xl md:text-7xl font-extrabold text-center mb-10 leading-snug tracking-wide">
+          About <span className="text-teal-400">Me</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-center max-w-3xl mx-auto mb-16 text-gray-300">
+          I'm a full-stack developer passionate about solving problems through
+          innovative technology. With a dedication to continuous learning and
+          growth, I aim to create seamless digital experiences that inspire and
+          empower.
+        </p>
+
+        <div className="bg-gray-800 bg-opacity-90 p-10 rounded-xl shadow-lg max-w-4xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-teal-400 text-center mb-6">
+            My Skills
+          </h2>
+          <div className="flex flex-wrap justify-center gap-6 text-center">
+            <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
+              JavaScript
+            </span>
+            <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
+              React.js
+            </span>
+            <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
+              Node.js
+            </span>
+            <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
+              Express.js
+            </span>
+            <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
+              MongoDB
+            </span>
+            <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
+              Tailwind CSS
+            </span>
+            <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
+              Redux Toolkit
+            </span>
+            <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
+              Git & GitHub
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-12 justify-center items-center">
+          <div className="bg-gradient-to-r from-blue-600 to-teal-600 p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <h3 className="text-2xl font-semibold text-white mb-4">
+              My Mission
+            </h3>
+            <p className="text-gray-200 text-lg">
+              To craft innovative, impactful solutions that empower users and
+              solve real-world problems through technology.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-r from-gray-800 to-gray-700 p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <h3 className="text-2xl font-semibold text-teal-400 mb-4">
+              What Drives Me?
+            </h3>
+            <p className="text-gray-200 text-lg">
+              The limitless potential of technology and my commitment to creating
+              a meaningful impact through every project I build.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <p className="text-xl italic text-center text-gray-400">
+            "Dream big, code bigger, and never stop learning."
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-6 bg-black bg-opacity-70 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-2">My Mission</h3>
-              <p className="text-sm text-gray-300">
-                To craft innovative digital experiences that empower people and
-                solve real-world problems.
-              </p>
-            </div>
-            <div className="p-6 bg-black bg-opacity-70 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-2">What Drives Me?</h3>
-              <p className="text-sm text-gray-300">
-                The endless possibilities of technology and the desire to leave
-                a meaningful impact through code.
-              </p>
-            </div>
-            </div>
-<p className="mt-6 italic text-gray-400">
-  {"Dream big, code bigger, and never stop learning."}
-</p>
-</div>
-
-      </div>
-
-      <div className="py-16 bg-gray-900">
-        <h2 className="text-4xl font-extrabold text-center mb-8 text-blue-400 tracking-wide relative">
-          Hobbies
-          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-blue-400"></span>
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-blue-400">
-            <FaMusic className="text-5xl text-blue-400 mb-2 group-hover:text-blue-600 transition-colors" />
-            <p className="text-lg">Listening to Music</p>
-          </div>
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-400">
-            <FaBook className="text-5xl text-yellow-400 mb-2 group-hover:text-yellow-600 transition-colors" />
-            <p className="text-lg">Reading</p>
-          </div>
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-green-400">
-            <FaCode className="text-5xl text-green-400 mb-2 group-hover:text-green-600 transition-colors" />
-            <p className="text-lg">Coding</p>
-          </div>
         </div>
-      </div>
 
-      <div className="py-16 bg-gray-800">
-        <h2 className="text-4xl font-extrabold text-center mb-8 text-yellow-400 tracking-wide relative">
-          Skills
-          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-yellow-400"></span>
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12">
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500">
-            <SiJavascript className="text-5xl text-yellow-500 mb-2 group-hover:text-yellow-700 transition-colors" />
-            <p className="text-lg">JavaScript</p>
-          </div>
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500">
-            <SiReact className="text-5xl text-blue-500 mb-2 group-hover:text-blue-700 transition-colors" />
-            <p className="text-lg">React</p>
-          </div>
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-teal-400">
-            <SiTailwindcss className="text-5xl text-teal-400 mb-2 group-hover:text-teal-600 transition-colors" />
-            <p className="text-lg">Tailwind CSS</p>
-          </div>
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-blue-600">
-            <SiTypescript className="text-5xl text-blue-600 mb-2 group-hover:text-blue-800 transition-colors" />
-            <p className="text-lg">TypeScript</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="py-16 bg-gray-700">
-        <h2 className="text-4xl font-extrabold text-center mb-8 text-teal-400 tracking-wide relative">
-          Libraries & Frameworks
-          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-teal-400"></span>
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12">
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-green-500">
-            <SiNodedotjs className="text-5xl text-green-500 mb-2 group-hover:text-green-700 transition-colors" />
-            <p className="text-lg">Node.js</p>
-          </div>
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500">
-            <SiExpress className="text-5xl text-blue-500 mb-2 group-hover:text-blue-700 transition-colors" />
-            <p className="text-lg">Express</p>
-          </div>
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-green-400">
-            <SiMongodb className="text-5xl text-green-400 mb-2 group-hover:text-green-600 transition-colors" />
-            <p className="text-lg">MongoDB</p>
-          </div>
-          <div className="group flex flex-col items-center bg-black p-6 rounded-lg shadow-lg transition-all transform hover:scale-105 hover:shadow-lg hover:shadow-blue-600">
-            <SiNextdotjs className="text-5xl text-blue-600 mb-2 group-hover:text-blue-800 transition-colors" />
-            <p className="text-lg">Next.js</p>
-          </div>
-        </div>
+        <div className="w-full h-1 mt-12 bg-gradient-to-r from-blue-400 via-teal-400 to-gray-400"></div>
       </div>
     </div>
   );
