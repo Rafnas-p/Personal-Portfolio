@@ -15,7 +15,7 @@ function About() {
         </h1>
 
         <p className="text-lg md:text-xl text-center max-w-3xl mx-auto mb-16 text-gray-300">
-          I'm a full-stack developer passionate about solving problems through
+          I&apos;m a full-stack developer passionate about solving problems through
           innovative technology. With a dedication to continuous learning and
           growth, I aim to create seamless digital experiences that inspire and
           empower.
@@ -48,7 +48,7 @@ function About() {
               Redux Toolkit
             </span>
             <span className="bg-teal-600 text-white px-6 py-3 rounded-full font-medium text-lg shadow-md hover:bg-teal-500 transition duration-300">
-              Git & GitHub
+              Git &amp; GitHub
             </span>
           </div>
         </div>
@@ -77,7 +77,7 @@ function About() {
 
         <div className="mt-16">
           <p className="text-xl italic text-center text-gray-400">
-            "Dream big, code bigger, and never stop learning."
+            &quot;Dream big, code bigger, and never stop learning.&quot;
           </p>
         </div>
 
