@@ -40,10 +40,8 @@ function Navbar() {
   return (
     <nav className="fixed top-0 w-full bg-black text-white z-30">
       <div className="flex justify-between items-center p-4 md:p-6">
-        {/* Logo */}
         <h2 className="text-xl md:text-2xl font-bold tracking-wider italic">Rafnas</h2>
 
-        {/* Large Screen Navigation */}
         <div className="hidden md:flex space-x-10">
           {["home", "about", "work"].map((sectionId) => (
             <h3
@@ -59,7 +57,6 @@ function Navbar() {
           ))}
         </div>
 
-        {/* Small Screen Hamburger Menu */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -70,7 +67,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Small Screen Dropdown Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-black text-white shadow-lg">
           {["home", "about", "work"].map((sectionId) => (
