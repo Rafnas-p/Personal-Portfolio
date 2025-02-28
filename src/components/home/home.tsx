@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -41,9 +41,11 @@ function Home() {
           Hello, I&apos;m <span className="text-purple-400">Rafnas</span>
         </h1>
         <p className="text-gray-300 text-base md:text-lg max-w-xl text-center leading-relaxed">
-          A passionate MERN stack developer from Kerala, India. I create
-          high-quality web applications tailored to meet client needs while
-          ensuring seamless user experiences.
+          A passionate MERN stack developer from Kerala, India, with one year of
+          experience and a strong drive to build scalable and user-friendly web
+          applications. As a former intern, I have worked on three projects,
+          honing my skills in full-stack development while actively seeking new
+          opportunities to grow and contribute.
         </p>
 
         <div className="flex justify-center mt-8 gap-6">
@@ -54,12 +56,11 @@ function Home() {
             View My Work
           </button>
           <button
-  onClick={() => window.location.href = "https://wa.me/9633298524"}
-  className="px-5 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
->
-  Contact Me
-</button>
-
+            onClick={() => (window.location.href = "https://wa.me/9633298524")}
+            className="px-5 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            Contact Me
+          </button>
         </div>
       </div>
     </div>
