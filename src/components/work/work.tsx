@@ -34,34 +34,43 @@ function Work() {
   return (
     <div
       id="work"
-      className="bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 min-h-screen flex flex-col justify-between animate-bg-gradient"
+      className="bg-black min-h-screen flex flex-col justify-between "
     >
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-white drop-shadow-lg mb-10">
-        My Projects
-      </h2>
+      <div className="relative w-fit mx-auto pb-3 border-b-4 border-yellow-600 mt-5 mb-5">
+        <h2
+          className="text-5x2 sm:text-6x2 font-bold text-center 
+      text-transparent bg-clip-text bg-gradient-to-r 
+      from-yellow-500 to-red-600 drop-shadow-xl 
+      uppercase tracking-widest font-serif opacity-90"
+        >
+          ✦ My Projects ✦
+        </h2>
+      </div>
 
       {/* Mobile View */}
-      <div className="block sm:hidden px-4">
-        <div className="bg-white shadow-xl rounded-lg w-full max-w-sm mx-auto transform hover:scale-105 transition-transform duration-500 ease-out">
+      <div className="block sm:hidden">
+        <div className="bg-gray-900 shadow-xl rounded-lg w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500 ease-out p-6">
           <div
-            className="h-48 bg-cover bg-center rounded-t-lg relative overflow-hidden"
+            className="h-48 bg-cover bg-center rounded-lg"
             style={{ backgroundImage: `url(${currentProject.image})` }}
           ></div>
-          <div className="p-6">
-            <h3 className="text-xl font-semibold text-gray-800">{currentProject.title}</h3>
-            <p className="text-gray-600 mt-3">{currentProject.description}</p>
+          <div className="mt-4">
+            <h3 className="text-xl font-semibold text-white">
+              {currentProject.title}
+            </h3>
+            <p className="text-gray-400 mt-3">{currentProject.description}</p>
             <a
               href={currentProject.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-block text-white bg-indigo-600 px-4 py-2 rounded-full shadow-lg hover:bg-indigo-700 transition-transform transform hover:scale-110"
+              className="mt-6 inline-block text-white bg-red-600 px-4 py-2 rounded-full shadow-lg hover:bg-red-700 transition-transform transform hover:scale-110"
             >
-              Indrus
+              View Project
             </a>
           </div>
         </div>
         <div className="flex flex-col items-center mt-6">
-          <div className="w-full max-w-sm h-1 bg-gray-200 rounded-full overflow-hidden">
+          <div className="w-full max-w-md h-1 bg-gray-700 rounded-full overflow-hidden">
             <div
               className="h-full bg-indigo-600 transition-all duration-300"
               style={{ width: `${progressWidth}%` }}
@@ -77,26 +86,28 @@ function Work() {
       </div>
 
       {/* Desktop View */}
-      <div className="hidden sm:flex flex-wrap gap-8 justify-center px-4">
+      <div className="hidden sm:flex flex-wrap gap-12 justify-center">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-white shadow-lg rounded-lg w-full sm:w-72 transform hover:scale-105 transition-transform duration-500 ease-in-out hover:shadow-2xl"
+            className="bg-gray-900 shadow-lg rounded-lg w-full sm:w-80 p-6 transform hover:scale-105 transition-transform duration-500 ease-in-out hover:shadow-2xl"
           >
             <div
-              className="h-48 bg-cover bg-center rounded-t-lg relative overflow-hidden"
+              className="h-48 bg-cover bg-center rounded-lg"
               style={{ backgroundImage: `url(${project.image})` }}
             ></div>
-            <div className="p-6">
-              <h3 className="text-lg sm:text-2xl font-semibold text-gray-800">{project.title}</h3>
-              <p className="text-gray-600 mt-3">{project.description}</p>
+            <div className="mt-4">
+              <h3 className="text-xl font-semibold text-white">
+                {project.title}
+              </h3>
+              <p className="text-gray-400 mt-3">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block text-white bg-indigo-600 px-4 py-2 rounded-full shadow-lg hover:bg-indigo-700 transition-transform transform hover:scale-110"
+                className="mt-4 inline-block text-white bg-red-600 px-4 py-2 rounded-full shadow-lg hover:bg-red-700 transition-transform transform hover:scale-110"
               >
-                Indrus
+                View Project
               </a>
             </div>
           </div>
@@ -104,26 +115,44 @@ function Work() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6 mt-10">
-        <div className="max-w-screen-xl mx-auto px-4 flex flex-col items-center space-y-4">
-          <div className="flex justify-center space-x-6 text-2xl">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
-              <FaFacebook />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
-              <FaTwitter />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400">
-              <FaInstagram />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">
-              <FaLinkedin />
-            </a>
-          </div>
-          <p className="text-sm sm:text-base text-center">
-            © 2024 My Projects | All Rights Reserved
-          </p>
+      <footer className="w-full bg-gray-900 text-white py-6 mt-10 text-center">
+        <div className="flex justify-center space-x-6 text-2xl">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-300"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-pink-400"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-500"
+          >
+            <FaLinkedin />
+          </a>
         </div>
+        <p className="text-sm sm:text-base mt-4">
+          © 2024 My Projects | All Rights Reserved
+        </p>
       </footer>
     </div>
   );
