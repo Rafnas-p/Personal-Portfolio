@@ -3,8 +3,18 @@ import React, { useState } from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const projects = [
+  
+    {
+      id: 1,
+      title: "Vital Aid - Healthcare Monitoring System",
+      description:
+        "Developed a comprehensive healthcare monitoring and management system using the MERN stack. Integrated Gemini AI to generate personalized health reports. Implemented secure doctor appointment booking across multiple hospitals and enabled seamless communication with blood donors and volunteers. Added donation functionality to support healthcare initiatives and provided real-time updates on health-related events. Designed an intuitive admin panel for managing patients, doctors, donors, volunteers, and events efficiently.",
+      image: "home/vitalaid.png",
+      link: "https://vitalaid-snr.vercel.app/",
+    },
+  
   {
-    id: 1,
+    id: 2,
     title: "YouTube Clone",
     description:
       "Built a YouTube Clone using Next.js and TypeScript. Integrated MongoDB for data storage and Firebase Authentication for secure user login. Utilized Cloudinary and Multer for video uploads and media optimization. Implemented core features like channel management, a shorts section, video uploads, likes, subscribes, and comments. Designed a responsive UI with a modern, user-friendly interface.",
@@ -12,7 +22,7 @@ const projects = [
     link: "https://youtube-cloneby-rafnas.vercel.app",
   },
   {
-    id: 2,
+    id: 3,
     title: "E-Commerce Shoe Website",
     description:
       "Designed and developed a fully functional e-commerce website for shoes using the MERN stack (MongoDB, Express.js, React, Node.js). Implemented user authentication and authorization features, enabling secure access for customers and admins. Created a responsive and user-friendly interface using React, ensuring an optimal experience across devices. Integrated payment processing functionality using Razorpay, facilitating secure transactions for users.",
